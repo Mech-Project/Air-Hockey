@@ -11,7 +11,6 @@ public class SliderAngle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("test");
         SliderA.onValueChanged.AddListener(((v)=>{
             SliderAText.text = v.ToString("0.00")+"°";
         }));

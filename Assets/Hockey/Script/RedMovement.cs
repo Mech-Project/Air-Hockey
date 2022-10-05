@@ -10,6 +10,8 @@ public class RedMovement : MonoBehaviour
     void Start()
     {
         rb.useGravity = true;
+        float random = Random.Range(0, 5);
+        rb.mass = random;
     }
 
     // Update is called once per frame

@@ -11,7 +11,6 @@ public class SliderVelo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("test");
         SliderV.onValueChanged.AddListener(((v)=>{
             SliderVText.text = v.ToString("0.00")+"%";
         }));

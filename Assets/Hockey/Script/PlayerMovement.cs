@@ -23,8 +23,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, -1, rb.velocity.z);
         }
         if(Input.GetKeyDown(KeyCode.Space)){
-            float veloX = (float)(SliderV.value*Math.Cos(SliderA.value*0.0174533));
-            float veloZ = (float)(SliderV.value*Math.Sin(SliderA.value*0.0174533));
+            float real = SliderV.value/2;
+            float veloX = (float)(real*Math.Cos(SliderA.value*0.0174533));
+            float veloZ = (float)(real*Math.Sin(SliderA.value*0.0174533));
             rb.velocity = new Vector3(veloX, 0, veloZ);
         }
     }

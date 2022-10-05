@@ -14,11 +14,13 @@ public class Collide : MonoBehaviour
             rb.velocity = new Vector3(veloX,0,veloZ);
         }
         if (coll.collider.tag=="Red"){
-            Debug.Log("Stop");
             rb.velocity = new Vector3(0,0,0);
         }
-        if (coll.collider.name=="Goal" && rb.name=="Red"){
+        if (coll.collider.name=="Goal" && rb.tag=="Red"){
             Debug.Log("Goal!!!");
+        }
+        if (coll.collider.name=="Goal" && rb.name=="White"){
+            Debug.Log("BOO!!!");
         }
     }
 }
