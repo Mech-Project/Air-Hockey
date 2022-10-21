@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     [SerializeField] private Slider SliderV;
     [SerializeField] private Slider SliderA;
+    bool ac=true;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +23,14 @@ public class PlayerMovement : MonoBehaviour
         if(rb.position.y>0.15){
             rb.velocity = new Vector3(rb.velocity.x, -1, rb.velocity.z);
         }
-        if(Input.GetKeyDown(KeyCode.Space)){
-            float real = SliderV.value/2;
-            float veloX = (float)(real*Math.Cos(SliderA.value*0.0174533));
-            float veloZ = (float)(real*Math.Sin(SliderA.value*0.0174533));
-            rb.velocity = new Vector3(veloX, 0, veloZ);
+        if(ac){
+            if(Input.GetKeyDown(KeyCode.Space)){
+                float real = SliderV.value/2;
+                float veloX = (float)(real*Math.Cos(SliderA.value*0.0174533));
+                float veloZ = (float)(real*Math.Sin(SliderA.value*0.0174533));
+                rb.velocity = new Vector3(veloX, 0, veloZ);
+                ac=false;
+            }
         }
     }
 }
