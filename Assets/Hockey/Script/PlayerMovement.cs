@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Slider SliderV;
     [SerializeField] private Slider SliderA;
     bool ac=true;
+    public GameObject arrow;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
                 float veloZ = (float)(real*Math.Sin(SliderA.value*0.0174533));
                 rb.velocity = new Vector3(veloX, 0, veloZ);
                 ac=false;
+                arrow.SetActive(false);
             }
         }
     }

@@ -8,18 +8,21 @@ public class SliderAngle : MonoBehaviour
 {
     [SerializeField] private Slider SliderA;
     [SerializeField] private TextMeshProUGUI SliderAText;
+    public GameObject objectToRotate;
+    private float previousValue;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        SliderA.onValueChanged.AddListener(((v)=>{
-            SliderAText.text = v.ToString("0.00")+"°";
-        }));
-        
+        this.SliderA.onValueChanged.AddListener (this.OnSliderChanged);
+        this.previousValue = this.SliderA.value;
     }
 
     // Update is called once per frame
-    void Update()
+    void OnSliderChanged(float value)
     {
-        
+        float delta = value - this.previousValue;
+        this.objectToRotate.transform.Rotate (Vector3.forward * delta);
+        this.previousValue = value;
+        this.SliderAText.text = value.ToString("0.00")+"°";
     }
 }
