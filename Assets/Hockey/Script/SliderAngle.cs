@@ -21,7 +21,7 @@ public class SliderAngle : MonoBehaviour
     void OnSliderChanged(float value)
     {
         float delta = value - this.previousValue;
-        this.objectToRotate.transform.Rotate (Vector3.forward * delta);
+        this.objectToRotate.transform.Rotate (Vector3.down * delta);
         this.previousValue = value;
         this.SliderAText.text = value.ToString("0.00")+"°";
     }
