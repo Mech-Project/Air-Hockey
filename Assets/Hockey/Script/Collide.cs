@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Collide : MonoBehaviour
 {
     public Rigidbody rb;
+    public GameObject HUD;
+    public GameObject Menu;
+    [SerializeField] private TextMeshProUGUI StatusText;
+
     void OnCollisionEnter(Collision coll){
         if (coll.collider.name=="White"){
             float momemtumZ = (coll.relativeVelocity.z * coll.rigidbody.mass);
@@ -17,10 +22,9 @@ public class Collide : MonoBehaviour
             rb.velocity = new Vector3(0,0,0);
         }
         if (coll.collider.name=="Goal" && rb.tag=="Red"){
-            Debug.Log("Goal!!!");
-        }
-        if (coll.collider.name=="Goal" && rb.name=="White"){
-            Debug.Log("BOO!!!");
+            StatusText.text = "You Win";
+            HUD.SetActive(false);
+            Menu.SetActive(true);
         }
     }
 }

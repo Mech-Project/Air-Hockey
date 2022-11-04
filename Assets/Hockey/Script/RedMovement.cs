@@ -10,15 +10,17 @@ public class RedMovement : MonoBehaviour
     void Start()
     {
         rb.useGravity = true;
-        float random = Random.Range(0, 5);
-        rb.mass = random;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(rb.position.y>0.15){
-            rb.velocity = new Vector3(rb.velocity.x, -1, rb.velocity.z);
+            rb.velocity = new Vector3(rb.velocity.x, -10, rb.velocity.z);
+        }
+        else
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         }
     }
 }
