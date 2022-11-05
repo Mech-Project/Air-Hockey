@@ -129,6 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5727288353221524514}
+  HUD: {fileID: 0}
+  Menu: {fileID: 0}
+  StatusText: {fileID: 0}
 --- !u!114 &2853631388216957247
 MonoBehaviour:
   m_ObjectHideFlags: 0
