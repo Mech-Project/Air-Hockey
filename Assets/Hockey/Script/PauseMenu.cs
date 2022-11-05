@@ -25,10 +25,12 @@ public class PauseMenu : MonoBehaviour
         if(red.GetComponent<Rigidbody>().velocity.magnitude > 11){
             isstop=false;
         }
-        if(isstop && !(White.GetComponent<Rigidbody>().velocity.magnitude > 11) && !MyWhite.ac && StatusText.text!="You Win"){
+        if((isstop && !(White.GetComponent<Rigidbody>().velocity.magnitude > 11) && !MyWhite.ac && StatusText.text!="You Win")
+        ||(red.transform.position.magnitude>60))
+        {
+            StatusText.text = "You Lose";
             if(!Menu.activeInHierarchy)
             {
-                StatusText.text = "You Lose";
                 this.Resume();
             }
         }
