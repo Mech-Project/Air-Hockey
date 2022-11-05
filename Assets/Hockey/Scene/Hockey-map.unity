@@ -607,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5727288353221524515, guid: 56c08fa4f12e3d0489d939d9d7544dcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.264
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5727288353221524515, guid: 56c08fa4f12e3d0489d939d9d7544dcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1062,6 +1062,8 @@ MonoBehaviour:
   SliderA: {fileID: 1332497627}
   ac: 1
   arrow: {fileID: 1970502838}
+  red: {fileID: 168570556}
+  count: 2
 --- !u!23 &458305704
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1120,7 +1122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458305702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.86, y: 0.199, z: 0}
+  m_LocalPosition: {x: -20.86, y: 0.184, z: 0}
   m_LocalScale: {x: 1.5, y: 0.134, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:

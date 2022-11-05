@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Slider SliderA;
     public bool ac=true;
     public GameObject arrow;
+    public GameObject red;
+    public int count = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +30,19 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         }
-        if(ac){
+        if(count<=0){
+            ac=false;
+            arrow.SetActive(false);
+        }
+        if(ac && rb.velocity.magnitude<=10 && red.GetComponent<Rigidbody>().velocity.magnitude<=10){
+            arrow.SetActive(true);
+            arrow.transform.position = rb.position+Vector3.up;
             if(Input.GetKeyDown(KeyCode.Space)){
                 float real = SliderV.value/1.2f;
                 float veloX = (float)(real*Math.Cos(SliderA.value*0.0174533));
                 float veloZ = (float)(real*Math.Sin(SliderA.value*0.0174533));
                 rb.velocity = new Vector3(veloX, 0, veloZ);
-                ac=false;
+                count--;
                 arrow.SetActive(false);
             }
         }
