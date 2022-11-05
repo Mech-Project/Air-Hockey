@@ -16,7 +16,7 @@ public class Spawn : MonoBehaviour
 
     void Start()
     {
-        this.randomSpawnPosition = new Vector3(Random.Range(-20, 5), 0.15f, Random.Range(-5, 5));
+        this.randomSpawnPosition = new Vector3(Random.Range(-12, 12), 0.15f, Random.Range(-5, 5));
         red.transform.position=randomSpawnPosition;
     }
 
@@ -27,7 +27,7 @@ public class Spawn : MonoBehaviour
 
     public void Restart()
     {
-        this.randomSpawnPosition = new Vector3(Random.Range(-20, 5), 0.15f, Random.Range(-5, 5));
+        this.randomSpawnPosition = new Vector3(Random.Range(-12, 12), 0.15f, Random.Range(-5, 5));
         this.Re();
     }
 
