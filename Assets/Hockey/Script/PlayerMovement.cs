@@ -6,13 +6,14 @@ using System;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     public Rigidbody rb;
     [SerializeField] private Slider SliderV;
     [SerializeField] private Slider SliderA;
-    public bool ac=true;
+    public bool ac = true;
     public GameObject arrow;
     public GameObject red;
-    public int count = 2;
+    public int count = 5;
 
     // Start is called before the first frame update
     void Start()

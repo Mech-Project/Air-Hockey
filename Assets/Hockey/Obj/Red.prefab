@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb77b994fccc694ab699dd86fa69df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 5727288353221524514}
+  rbWhite: {fileID: 5727288353221524514}
+  rbRed: {fileID: 0}
   HUD: {fileID: 0}
   Menu: {fileID: 0}
   StatusText: {fileID: 0}
