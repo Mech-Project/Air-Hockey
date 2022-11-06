@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public bool ac = true;
     public GameObject arrow;
     public GameObject red;
-    public int count = 5;
+    public int count;
 
     // Start is called before the first frame update
     void Start()
