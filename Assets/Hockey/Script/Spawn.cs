@@ -39,7 +39,7 @@ public class Spawn : MonoBehaviour
         White.transform.position=transpos;
         arrow.SetActive(true);
         MyWhite.ac=true;
-        MyWhite.count=2;
+        MyWhite.count=10;
         this.Resume();
     }
     public void Resume()
