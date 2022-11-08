@@ -35,11 +35,11 @@ public class PlayerMovement : MonoBehaviour
             ac=false;
             arrow.SetActive(false);
         }
-        if(ac && rb.velocity.magnitude<=10 && red.GetComponent<Rigidbody>().velocity.magnitude<=10){
+        if(ac && rb.velocity.magnitude<11 && red.GetComponent<Rigidbody>().velocity.magnitude<11){
             arrow.SetActive(true);
             arrow.transform.position = rb.position+Vector3.up;
             if(Input.GetKeyDown(KeyCode.Space)){
-                float real = SliderV.value/1.2f;
+                float real = SliderV.value;
                 float veloX = (float)(real*Math.Cos(SliderA.value*0.0174533));
                 float veloZ = (float)(real*Math.Sin(SliderA.value*0.0174533));
                 rb.velocity = new Vector3(veloX, 0, veloZ);

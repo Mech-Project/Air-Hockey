@@ -12,7 +12,7 @@ public class SliderVelo : MonoBehaviour
     void Start()
     {
         SliderV.onValueChanged.AddListener(((v)=>{
-            SliderVText.text = v.ToString("0.00")+"%";
+            SliderVText.text = v.ToString("0.00")+" unit/s";
         }));
         
     }
